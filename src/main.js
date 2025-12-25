@@ -490,12 +490,11 @@ function setupScrollLogic() {
         }
 
         // 2. Present Highlight Logic
-        const presents = ['Present_007', 'Present_006', 'Present_004'];
+        const presents = ['Present_006', 'Present_004'];
         
         // Map presents to placeholder images (Clash Royale Style)
         const PRESENT_IMAGES = {
-            'Present_007': 'https://placehold.co/400x400/b3161b/d4af37?text=Gift+1',
-            'Present_006': 'https://placehold.co/400x400/165b33/d4af37?text=Gift+2',
+            'Present_006': 'assets/ElenImage.jpg',
             'Present_004': 'assets/CapybaraCostume.png'
         };
 
