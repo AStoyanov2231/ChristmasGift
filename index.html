@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Scroll Journey</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner">❄️</div>
+            <h1>Зареждане на Коледната Магия...</h1>
+        </div>
+    </div>
+
+    <div id="container"></div>
+    
+    <div id="ui-overlay" class="hidden">
+        <div class="content">
+            <h2 id="ui-title">Waypoint Reached</h2>
+            <p id="ui-description">You have reached a point of interest.</p>
+            <button id="next-button">Continue Journey</button>
+        </div>
+    </div>
+    
+    <div id="house-prompt">
+        🎄 Enter the house by clicking the door 🎄
+    </div>
+    
+    <!-- New Elements -->
+    <div id="letter-modal">
+        <div class="letter-paper">
+            <h2>Честита Коледа, Зайче!</h2>
+            <p>Това е магическия ми начин по който ще ти поднеса подаръците си!.</p>
+            <p>Те ще те чакат под елхата на следващия ден 25ти Демември, а сега отиди да се наспиш!</p>
+            <p>Целувки,<br>Твоят Заек, Мармот, Енот, Капибара Анди!</p>
+            <button id="close-letter-btn">Done</button>
+        </div>
+    </div>
+    <div id="sleep-overlay">
+        <div class="christmas-text">
+            25th December<br>Christmas Day
+        </div>
+    </div>
+    
+    <div id="start-text" class="fullscreen-text-overlay active">
+        <div class="text-panel">
+            <div class="big-text">Започни като плъзнеш</div>
+        </div>
+    </div>
+
+    <div id="final-text" class="fullscreen-text-overlay">
+        <div class="text-panel">
+            <div class="big-text">Честита Коледа зайче</div>
+        </div>
+    </div>
+    
+    <div id="card-container"></div>
+
+    <!-- New Card Reveal Overlay -->
+    <div id="card-reveal-overlay">
+        <div class="reveal-content">
+            <div class="glow-burst"></div>
+            <div class="card-wrapper">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span>?</span>
+                    </div>
+                    <div class="card-back">
+                        <img id="card-image" src="" alt="Gift">
+                    </div>
+                </div>
+            </div>
+            <button id="collect-btn" class="hidden">Collect</button>
+        </div>
+    </div>
+
+    <!-- Grand Finale Section -->
+    <div id="grand-finale" class="hidden">
+        <h1 class="final-title">Весела Коледа зайче</h1>
+        <div class="final-cards-container">
+            <div class="final-card-wrapper">
+                <div class="final-card">
+                    <img src="https://placehold.co/400x400/b3161b/d4af37?text=Gift+1" alt="Final Gift 1">
+                </div>
+            </div>
+            <div class="final-card-wrapper">
+                <div class="final-card">
+                    <img src="https://placehold.co/400x400/165b33/d4af37?text=Gift+2" alt="Final Gift 2">
+                </div>
+            </div>
+            <div class="final-card-wrapper">
+                <div class="final-card">
+                    <img src="assets/CapybaraCostume.png" alt="Final Gift 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scroll-height"></div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
